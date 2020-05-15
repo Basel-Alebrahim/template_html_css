@@ -1,0 +1,84 @@
+/** 3 Sectons Styles*/
+/*  3.0 Header section*/
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0,0,0,0.4);
+}
+
+.header .logo {
+    width: 40% ;
+}
+
+.header .logo img {
+    width: 20%;
+    margin-top: 10px;
+}
+.header .nav {
+    width: 60%;
+    list-style: none;
+    text-align: right;
+}
+
+.header .nav > li {
+    display: inline-block;
+    text-align: right;
+}
+
+.header .nav > li > a {
+    color: var(--whitecolor);
+    display: block;
+    padding: 20px 10px;
+    font-size: 15px;
+}
+
+.header .nav > li > a.active:after,
+.header .nav > li > a:hover::after {
+    content: "";
+    display: block;
+    height: 3px;
+    margin-top: 2px;
+    background-color: var(--maincolor);
+    transition: width 0.5s;
+}
+
+.header .nav > li > a.active:after {
+    width: 100%;
+}
+
+.header .nav > li > a:after {
+    width: 0;
+}
+
+.header .nav > li > a:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    position: absolute;
+    background: var(--maincolor);
+    width: 150px;
+    text-align: center;
+    left: -50%;
+    top: 70%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+
+.dropdown-menu a {
+    color: var(--whitecolor);
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
